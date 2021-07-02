@@ -1,13 +1,18 @@
 :root {
+  --white: rgb(255, 255, 255);
+  --gray: rgb(220, 220, 220);
   --green10: rgb(7, 107, 7);
   --brown10: #743f25;
   --brown20: rgb(71, 19, 19);
   
-  --sidebar-size: 13%;
+  --top-bar-height: 5rem;
+  --sidebar-size: 11rem;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 #body {
@@ -18,10 +23,12 @@ body {
 }
 
 #top-bar {
+  position: fixed;
   display: flex;
   background-color: var(--green10);
-  height: 8rem;
+  height: var(--top-bar-height);
   width: 100%;
+  top: 0;
 }
 
 #title {
@@ -29,12 +36,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: var(--sidebar-size);
 }
 
 #title-text {
-  color: var(--brown20);
-  font-size: 5rem;
+  color: var(--gray);
+  font-size: 3rem;
 }
 
 #container {
@@ -43,40 +49,93 @@ body {
   height: 100%;
 }
 
-#side-bar {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: linear-gradient(var(--green10), var(--brown10));
-  width: var(--sidebar-size);
-}
-
-.sidebar-items {
-  display: flex;
-  width: auto;
-  color: var(--brown20);
-  text-decoration: none;
-  align-items: center;
-  flex-direction: column;
-}
-
-.sidebar-items a {
-  margin: 6rem 0;
-  font-size: 1.5rem;
-  color: var(--brown20);
-  text-decoration: none;
-}
-
-#background {
-  background-image: url("../images/Forest.jpg");
-  background-repeat: space;
+#central {
   width: 100%;
-  opacity: 0.7;
+}
+
+#sidebar{
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow: auto;
+  width: 15%;
+}
+
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  transform: translateY(-50%);
+  position:fixed;
+  width: 15%;
+}
+
+
+#menu a {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  height: 4rem;
+  text-decoration: none;
+}
+
+
+
+#menu a:hover {
+  background-color: var(--green10);
+  color: white;
+}
+
+
+@media screen and (max-width: 700px) {
+ 
+  #container {
+    flex-direction: column;
+  }
+  #menu {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+  }
+  #menu a{
+    display: block;
+  }
+  #menu{float: left;}
+
+}
+
+@media screen and (max-width: 400px) {
+  #menu a {
+    text-align: center;
+    float:none;
+  }
 }
 
 #content {
-  width: 65%;
+  width: 50%;
   height: 100%;
-  background-color: #eee;
   margin: 0 auto;
+  margin-top: var(--top-bar-height);
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+article {
+  line-height: 2.5rem;
+  text-align: justify;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+article p {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
 }
