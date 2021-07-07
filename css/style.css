@@ -117,7 +117,6 @@ body {
 
 #content {
   width: 50%;
-  height: 100%;
   margin: 0 auto;
   margin-top: var(--top-bar-height);
   box-sizing: border-box;
@@ -128,6 +127,8 @@ body {
 article {
   line-height: 2.5rem;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
 
 article h2 {
@@ -137,5 +138,18 @@ article h2 {
 
 article p {
   font-size: 1.2rem;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  width: 80%;
+  text-align: center;
+}
+
+iframe {
+  margin: 2rem 0;
+  align-self: center;
 }
