@@ -1,0 +1,43 @@
+@media screen and (max-width: 800px) {
+  #container {
+    flex-direction: column;
+  }
+  #sidebar {
+    overflow-x: unset;
+    width: 100%;
+    position: unset;
+    height: fit-content;
+  }
+  #menu {
+    flex-direction: row;
+    position: unset;
+    height: fit-content;
+    transform: unset;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #menu a {
+    align-items: center;
+    color: black;
+    padding: 0.5rem;
+    text-decoration: none;
+    width: 100%
+  }
+  #content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 532px) {
+  
+
+  #content {
+
+    margin: 0;
+    width: 100%;
+    
+  }
+  #menu {
+    flex-direction: column;
+  }
+}
