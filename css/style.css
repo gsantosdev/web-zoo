@@ -77,7 +77,7 @@ body {
 
 #content {
   width: 50%;
-  height: calc(100% - var(--bar-height) - var(--bar-height));
+  min-height: calc(100vh - var(--bar-height) - var(--bar-height));
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
