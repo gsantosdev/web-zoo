@@ -111,9 +111,11 @@ figure {
   text-align: center;
 }
 
-iframe {
+#video {
   margin: 2rem 0;
-  align-self: center;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 footer {
