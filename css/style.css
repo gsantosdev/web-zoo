@@ -5,7 +5,7 @@
   --green20: rgb(7, 107, 7);
   --brown10: #743f25;
   --brown20: rgb(71, 19, 19);
-  
+
   --bar-height: 5rem;
   --sidebar-size: 11rem;
 }
@@ -42,36 +42,22 @@ body {
   font-size: 3rem;
 }
 
-#container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  margin-bottom: -50px;
-}
-
-#central {
-  width: 100%;
-}
-
-#sidebar{
+#sidebar {
   display: flex;
   justify-content: center;
   background-color: #f1f1f1;
   height: 100%;
-  /* overflow: auto; */
   width: 16rem;
 }
-
 
 #menu {
   display: flex;
   flex-direction: column;
   top: 50%;
   transform: translateY(-50%);
-  position:fixed;
+  position: fixed;
   width: fit-content;
 }
-
 
 #menu a {
   font-size: 1.5rem;
@@ -91,9 +77,10 @@ body {
 
 #content {
   width: 50%;
-  height: calc(100% - var(--bar-height) - var(--bar-height) );
+  height: calc(100% - var(--bar-height) - var(--bar-height));
   margin: 0 auto;
-  margin-top: var(--bar-height);
+  margin-left: auto;
+  margin-right: auto;
   box-sizing: border-box;
   padding: 1rem;
   background-color: #eee;
@@ -129,9 +116,9 @@ iframe {
   align-self: center;
 }
 
-footer{
+footer {
   position: sticky;
   min-height: var(--bar-height);
- 
+
   background-color: var(--green10);
 }
