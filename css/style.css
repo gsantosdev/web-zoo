@@ -96,6 +96,7 @@ article {
 article h2 {
   font-size: 2rem;
   margin: 2rem 0;
+  text-align: center;
 }
 
 article p {
@@ -119,8 +120,11 @@ figure {
 }
 
 footer {
-  position: sticky;
-  min-height: var(--bar-height);
-
+  width: 100%;
+  height: var(--bar-height);
+  color: white;
   background-color: var(--green10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
