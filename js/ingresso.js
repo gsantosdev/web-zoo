@@ -1,7 +1,7 @@
 const VALOR_INGRESSO = 50;
 
 function formataValor(valor) {
-  return valor.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
+  return valor.toLocaleString('pt-br', {minimumFractionDigits: 2});
 }
 
 function onMount() {
