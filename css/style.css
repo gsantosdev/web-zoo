@@ -167,18 +167,18 @@ footer {
   flex-direction: column;
 }
 
-#container-entrada {
+.container-entrada {
   margin: 4rem 0 0 0;
   display: flex;
 }
 
-#container-entrada input {
+.container-entrada input {
   flex-grow: 1;
   margin-right: 2rem;
   font-size: 1.3rem;
 }
 
-#container-entrada button {
+.container-entrada button {
   font-size: 1.3rem;
 }
 

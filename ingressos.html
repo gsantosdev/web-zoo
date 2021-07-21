@@ -39,18 +39,15 @@
               <span>Valor da entrada: R$ </span>
               <span id="valor-ingresso"></span>
             </div>
-            <div id="container-entrada">
+            <div class="container-entrada">
               <input
                 id="ingressante"
                 type="text"
                 placeholder="Nome completo do ingressante"
-                onkeyup=""
               />
               <button id="adicionar" onclick="adicionar()">Adicionar</button>
             </div>
-            <span id="erro" class="invisivel"
-              >O nome deve conter pelo menos 8 caracteres</span
-            >
+            <span id="erro-nome" class="invisivel">Insira um nome válido</span>
 
             <div id="pedido">
               <span class="subtitulo">Lista de ingressos:</span>
@@ -61,6 +58,18 @@
               <span>Total da compra: R$ </span>
               <span id="valor-total"></span>
             </div>
+
+            <div class="container-entrada">
+              <input
+                id="email"
+                type="text"
+                placeholder="E-mail para envio dos ingressos"
+              />
+              <button id="efetuar" onclick="efetuar()">Efetuar Reserva</button>
+            </div>
+            <span id="erro-email" class="invisivel"
+              >Insira um e-mail válido</span
+            >
           </div>
         </article>
       </div>

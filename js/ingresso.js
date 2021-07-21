@@ -4,11 +4,22 @@ function formataValor(valor) {
   return valor.toLocaleString('pt-br', {minimumFractionDigits: 2});
 }
 
+function somarTotal() {
+  const campo = document.getElementById("valor-total");
+  const total = Number(campo.textContent.replace(",", ".")) + VALOR_INGRESSO;
+  campo.textContent = formataValor(total);
+}
+
+function zerarTotal() {
+  const campo = document.getElementById("valor-total");
+  campo.textContent = formataValor(0);
+}
+
 function onMount() {
   document.getElementById("valor-ingresso").textContent =
     formataValor(VALOR_INGRESSO);
 
-  document.getElementById("valor-total").textContent = formataValor(0);
+  zerarTotal();
 
   document.getElementById("ingressante").addEventListener("keyup", (evento) => {
     if (evento.key === "Enter") {
@@ -16,12 +27,13 @@ function onMount() {
       document.getElementById("adicionar").click();
      }
   });
-}
 
-function somar() {
-  const campo = document.getElementById("valor-total");
-  const total = Number(campo.textContent.replace(",", ".")) + VALOR_INGRESSO;
-  campo.textContent = total;
+  document.getElementById("email").addEventListener("keyup", (evento) => {
+    if (evento.key === "Enter") {
+      evento.preventDefault();
+      document.getElementById("efetuar").click();
+     }
+  });
 }
 
 function adicionar() {
@@ -29,7 +41,7 @@ function adicionar() {
   const nome = campo.value.trim();
 
   if (nome.length < 8) {
-    document.getElementById("erro").className = "visivel";
+    document.getElementById("erro-nome").className = "visivel";
     return;
   }
 
@@ -39,8 +51,35 @@ function adicionar() {
   const lista = document.getElementById("lista-compra");
   lista.appendChild(item);
 
-  somar();
+  somarTotal();
 
   campo.value = "";
-  document.getElementById("erro").className = "invisivel";
+  document.getElementById("erro-nome").className = "invisivel";
+}
+
+function efetuar() {
+  const lista = document.getElementById("lista-compra");
+
+  if (!lista.getElementsByTagName("li").length) {
+    document.getElementById("erro-nome").className = "visivel";
+    return;
+  }
+
+  const campo = document.getElementById("email");
+  const email = campo.value.trim();
+  const re = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+  
+  if (!re.test(email)) {
+    document.getElementById("erro-email").className = "visivel";
+    return;
+  }
+
+  lista.innerHTML = "";
+  
+  zerarTotal();
+  
+  campo.value = "";
+  document.getElementById("erro-email").className = "invisivel";
+
+  alert("Reserva efetuada! Para mais informações, verifique seu e-mail.")
 }
