@@ -159,16 +159,16 @@ footer {
 
 #container {
   width: 70%;
-  margin: 0 auto;
+  margin: 3rem auto;
   height: 100%;
   font-size: 1.3rem;
-  
+
   display: flex;
   flex-direction: column;
 }
 
 #container-entrada {
-  margin: 2rem 0;
+  margin: 4rem 0 0 0;
   display: flex;
 }
 
@@ -189,4 +189,8 @@ footer {
 .visivel {
   color: red;
   visibility: visible;
+}
+
+#total-entrada {
+  margin-top: 3rem;
 }

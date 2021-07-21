@@ -32,26 +32,33 @@
 
       <div id="content">
         <article>
-          <h2>Compre suas entradas para o ZooPark</h2>
+          <h2>Reserve suas entradas para o ZooPark</h2>
 
           <div id="container">
             <div id="valor-entrada">
               <span>Valor da entrada: </span>
-              <span>R$ 50,00 </span>
+              <span id="valor-ingresso"></span>
             </div>
             <div id="container-entrada">
               <input
-              id="ingressante"
-              type="text"
-              placeholder="Nome completo do ingressante"
+                id="ingressante"
+                type="text"
+                placeholder="Nome completo do ingressante"
               />
               <button onclick="adicionar()">Adicionar</button>
             </div>
-            <span id="erro" class="invisivel">O nome deve conter pelo menos 8 caracteres</span>
-            
+            <span id="erro" class="invisivel"
+              >O nome deve conter pelo menos 8 caracteres</span
+            >
+
             <div id="pedido">
               <span class="subtitulo">Lista de ingressos:</span>
               <ul id="lista-compra"></ul>
+            </div>
+
+            <div id="total-entrada">
+              <span>Total da compra: </span>
+              <span id="valor-total"></span>
             </div>
           </div>
         </article>
@@ -60,5 +67,8 @@
       <footer>© 2021, ZooPark. Todos os direitos reservados.</footer>
     </div>
     <script src="./js/ingresso.js"></script>
+    <script>
+      onMount();
+    </script>
   </body>
 </html>

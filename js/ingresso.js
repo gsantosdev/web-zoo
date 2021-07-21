@@ -1,3 +1,18 @@
+const VALOR_INGRESSO = 50;
+
+function formataValor(valor) {
+  return valor.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
+}
+
+function onMount() {
+  document.getElementById("valor-ingresso").textContent =
+    formataValor(VALOR_INGRESSO);
+
+  document.getElementById("valor-total").textContent = formataValor(0);
+}
+
+function somar() {}
+
 function adicionar() {
   const nome = document.getElementById("ingressante").value.trim();
 
@@ -11,6 +26,6 @@ function adicionar() {
 
   const lista = document.getElementById("lista-compra");
   lista.appendChild(item);
-  
+
   document.getElementById("erro").className = "invisivel";
 }
