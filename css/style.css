@@ -134,7 +134,8 @@ figure {
   font-size: 1.2rem;
 }
 
-#entrada input, textarea {
+#entrada input,
+textarea {
   font-size: 1.2rem;
   resize: none;
   outline-color: var(--green10);
@@ -154,4 +155,38 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#container {
+  width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  font-size: 1.3rem;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+#container-entrada {
+  margin: 2rem 0;
+  display: flex;
+}
+
+#container-entrada input {
+  flex-grow: 1;
+  margin-right: 2rem;
+  font-size: 1.3rem;
+}
+
+#container-entrada button {
+  font-size: 1.3rem;
+}
+
+.invisivel {
+  visibility: hidden;
+}
+
+.visivel {
+  color: red;
+  visibility: visible;
 }

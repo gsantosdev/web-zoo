@@ -34,6 +34,26 @@
         <article>
           <h2>Compre suas entradas para o ZooPark</h2>
 
+          <div id="container">
+            <div id="valor-entrada">
+              <span>Valor da entrada: </span>
+              <span>R$ 50,00 </span>
+            </div>
+            <div id="container-entrada">
+              <input
+              id="ingressante"
+              type="text"
+              placeholder="Nome completo do ingressante"
+              />
+              <button onclick="adicionar()">Adicionar</button>
+            </div>
+            <span id="erro" class="invisivel">O nome deve conter pelo menos 8 caracteres</span>
+            
+            <div id="pedido">
+              <span class="subtitulo">Lista de ingressos:</span>
+              <ul id="lista-compra"></ul>
+            </div>
+          </div>
         </article>
       </div>
 
