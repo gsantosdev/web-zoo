@@ -45,10 +45,11 @@ function adicionar() {
     return;
   }
 
-  const item = document.createElement("li");
-  item.appendChild(document.createTextNode(nome));
-
   const lista = document.getElementById("lista-compra");
+  const item = document.createElement("li");
+  const numero = lista.getElementsByTagName("li").length + 1;
+
+  item.appendChild(document.createTextNode(`#${numero}: ${nome}`));
   lista.appendChild(item);
 
   somarTotal();
