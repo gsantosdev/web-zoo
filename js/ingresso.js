@@ -1,7 +1,7 @@
 const VALOR_INGRESSO = 50;
 
 function formataValor(valor) {
-  return valor.toLocaleString('pt-br', {minimumFractionDigits: 2});
+  return valor.toLocaleString("pt-br", { minimumFractionDigits: 2 });
 }
 
 function somarTotal() {
@@ -25,14 +25,14 @@ function onMount() {
     if (evento.key === "Enter") {
       evento.preventDefault();
       document.getElementById("adicionar").click();
-     }
+    }
   });
 
   document.getElementById("email").addEventListener("keyup", (evento) => {
     if (evento.key === "Enter") {
       evento.preventDefault();
       document.getElementById("efetuar").click();
-     }
+    }
   });
 }
 
@@ -69,18 +69,18 @@ function efetuar() {
   const campo = document.getElementById("email");
   const email = campo.value.trim();
   const re = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
-  
+
   if (!re.test(email)) {
     document.getElementById("erro-email").className = "visivel";
     return;
   }
 
   lista.innerHTML = "";
-  
+
   zerarTotal();
-  
+
   campo.value = "";
   document.getElementById("erro-email").className = "invisivel";
 
-  alert("Reserva efetuada! Para mais informações, verifique seu e-mail.")
+  alert("Reserva efetuada! Para mais informações, verifique seu e-mail.");
 }
