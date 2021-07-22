@@ -21,7 +21,7 @@
     color: black;
     padding: 0.5rem;
     text-decoration: none;
-    width: 100%
+    width: 100%;
   }
   #content {
     width: 80%;
@@ -29,13 +29,9 @@
 }
 
 @media screen and (max-width: 532px) {
-  
-
   #content {
-
     margin: 0;
     width: 100%;
-    
   }
   #menu {
     flex-direction: column;
