@@ -28,7 +28,7 @@
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 640px) {
   #content {
     margin: 0;
     width: 100%;
